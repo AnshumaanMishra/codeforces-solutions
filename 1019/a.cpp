@@ -1,25 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long int lli;
+#define MOD int(7+1e9)
+
 void solve(){
     int n;
     cin >> n;
-    int max = 0;
-    int min = INT_MAX;
+    set<int> nums;
     int temp;
-    for(int i = 0; i < n; i++){
+    while(n--){
         cin >> temp;
-        if(temp > max){
-            max = temp;
-        }
-        if(temp < min){
-            min = temp;
-        }
+        nums.insert(temp);
     }
-    cout << max - min << endl;
+    cout << nums.size() << endl;
 }
 
 int main(){
+    cin.tie(0)->sync_with_stdio(0);
     int t;
     cin >> t;
     while(t--){
